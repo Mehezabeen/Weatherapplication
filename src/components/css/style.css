@@ -1,0 +1,159 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+ 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  background:#aecbf4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 100vh;
+  width: 100vw;
+  /* font-family: "Clicker Script", cursive; */
+  font-family: "Poppins", sans-serif;
+ 
+}
+html {
+  font-size: 100%;
+  height: 100%;
+}
+html {
+  background:#eee;
+}
+ 
+.box {
+  background: #202c33;
+  color: #fff;
+  padding: 2rem;
+  width: 25vw;
+  margin: 4rem auto;
+  height: 60vh;
+  border-radius: 20px;
+  box-shadow: 0 0.2rem 3rem rgba(0,0,0,0.2);
+  position: relative;
+  overflow: hidden;
+  transform: translate3d(0,0,0);
+  min-width: 20rem;
+  min-height: 35rem;
+}
+.weather_forecast {
+  background: #1e1e1e;
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 30px;
+}
+.weather_info {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1rem;
+  margin-top: 3rem;
+}
+.weather_icon img {
+  width: 100px;
+}
+.weather_location {
+  font-size: 1.25rem;
+}
+ 
+.weather_temperature {
+  font-size: 2rem;
+}
+ 
+.weather_min_max {
+  display: flex;
+  justify-content:center;
+}
+.inputField{
+  border-radius: 20px;
+  height: 2rem;
+  width: 90%;
+}
+ 
+.wave-one {
+  opacity: 0.3;
+  position: absolute;
+  top: 120%;
+  left: 50%;
+  background: white;
+  width: 50rem;
+  height: 50rem; /* Corrected typo here */
+  margin-left: -25rem;
+  margin-top: -20rem;
+  transform-origin: 50% 48%;
+  border-radius: 43%;
+  animation: drift 3000ms infinite linear; /* Corrected animation name */
+  z-index: 1;
+}
+ 
+.wave-two {
+  animation: drift 5000ms infinite linear; /* Corrected animation name */
+  opacity: 0.2;
+  z-index: 2 !important;
+}
+ 
+.wave-three {
+  animation: drift 7000ms infinite linear; /* Corrected animation name */
+  opacity: 0.1;
+  z-index: 3 !important;
+}
+.box:after {
+  content: "";
+  display: block;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 11;
+  transform: translate3d(0, 0, 0);
+}
+@keyframes drift {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+ 
+@keyframes drift{
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+ 
+@keyframes drift {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+ 
+@media (max-width: 936px) {
+  .box {
+    width: 90%;
+  }
+ 
+  .weather_header {
+    flex-direction: column;
+  }
+ 
+  .weather_units {
+    margin-top: 1rem;
+  }
+}
+ 
+@media (max-width: 400px) {
+  .weather_info {
+    grid-template-columns: none;
+  }
+}
